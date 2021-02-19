@@ -31,7 +31,6 @@ export const GlobalProvider = ({ children }) => {
             type:"ADD",
             payload: transection
         })
-        console.log(typeof(transection.amount));
     }
 
     return (
