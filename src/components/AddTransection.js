@@ -11,7 +11,7 @@ const AddTransection = () => {
 
     const [text, setText] = React.useState('');
     const [amount, setAmount] = React.useState(0);
-
+    //Style for Form  
     const useStyles = makeStyles((theme) => ({
         margin: {
             marginTop: theme.spacing(2),
