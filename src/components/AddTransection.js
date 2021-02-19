@@ -9,6 +9,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const AddTransection = () => {
 
+    const [text, setText] = React.useState('');
+    const [amount, setAmount] = React.useState(0);
+
     const useStyles = makeStyles((theme) => ({
         margin: {
             marginTop: theme.spacing(2),
@@ -30,6 +33,8 @@ const AddTransection = () => {
                     multiline
                     rowsMax={8}
                     variant="outlined"
+                    value={text}
+                    onChange={(e)=>{setText(e.target.value)}}
                 />
                 <h4 className='title'>(negative - expense , postive - income)</h4>
                 <FormControl fullWidth className={classes.margin} variant="outlined">
@@ -38,6 +43,7 @@ const AddTransection = () => {
                         id="outlined-adornment-amount"
                         startAdornment={<InputAdornment position="start">$</InputAdornment>}
                         labelWidth={60}
+                        onChange={(e)=>{setAmount(e.target.value)}}
                     />
                 </FormControl>
                 <Button variant="contained" className={classes.ali} color="primary">

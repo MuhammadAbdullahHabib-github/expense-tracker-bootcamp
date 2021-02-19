@@ -5,11 +5,12 @@ import Header from './components/Header';
 import Balance from './components/Balance';
 import IncomeExpense from './components/IncomeExpense';
 import TransectionList from './components/TransectionList';
-import AddTransection from './components/AddTransection';   
+import AddTransection from './components/AddTransection';
+import {GlobalProvider} from './context/GlobalState'
 
 function App() {
     return (
-        <div>
+        <GlobalProvider>
             <Header />
             <div className="container">
                 <Balance />
@@ -17,7 +18,7 @@ function App() {
                 <TransectionList />
                 <AddTransection />
             </div>
-        </div>
+        </GlobalProvider>
     );
 }
 
