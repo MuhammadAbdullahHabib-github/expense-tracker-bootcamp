@@ -25,11 +25,20 @@ export const GlobalProvider = ({ children }) => {
             payload: id,
         })
     }
+
+    function addTransection(transection){
+        dispatch({
+            type:"ADD",
+            payload: transection
+        })
+        console.log(typeof(transection.amount));
+    }
+
     return (
         <GlobalContext.Provider value={
             {
                 transection: state.transection,
-                DeleteTransection
+                addTransection:addTransection
             }
         }>
             {children}
