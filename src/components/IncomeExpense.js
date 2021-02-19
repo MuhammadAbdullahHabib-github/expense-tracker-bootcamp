@@ -4,8 +4,8 @@ import {GlobalContext} from '../context/GlobalState';
 const IncomeExpense = () => {
      const {transection} = useContext(GlobalContext);
      const amount  = transection.map((item)=>(item.amount));
-     const positive = amount.filter(value => value > 0).reduce((acc, item)=>(acc = acc + item),0);
-     const negative = Math.abs(amount.filter(value => value < 0).reduce((acc , item )=>(acc = acc + item),0));
+     const positive = amount.filter(value => value > 0).reduce((acc, item)=>(acc = acc + item),0).toFixed(2);
+     const negative = Math.abs(amount.filter(value => value < 0).reduce((acc , item )=>(acc = acc + item),0)).toFixed(2);
     return (
         <div className='income-expense-container'>
             <div>
