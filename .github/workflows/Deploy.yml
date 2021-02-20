@@ -33,9 +33,7 @@ jobs:
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install 
-      # Creating Issues
-
-    
+      
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: build # will run `yarn build` command
