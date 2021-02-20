@@ -57,7 +57,7 @@ const AddTransection = () => {
                     value={input.text}
                     onChange={(e)=>{setInput({...input ,  text:e.target.value})}}
                 />
-                <h4 className='title'>(negative - expense , postive - income)</h4>
+                <h4 className='title'>(negative - expense , positive - income)</h4>
                 <FormControl fullWidth className={classes.margin} variant="outlined">
                     <InputLabel htmlFor="outlined-adornment-amount">Amount</InputLabel>
                     <OutlinedInput 
