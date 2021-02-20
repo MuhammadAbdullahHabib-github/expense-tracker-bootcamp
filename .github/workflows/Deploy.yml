@@ -30,11 +30,12 @@ jobs:
         with: 
           node-version: '12'
           
-      - uses: Borales/actions-yarn@v2.0.0
+      - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install 
-      # Creating Issue
-      - name: Build 
+      # Creating Issues
+
+    
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: build # will run `yarn build` command
