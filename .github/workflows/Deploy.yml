@@ -30,12 +30,12 @@ jobs:
         with: 
           node-version: '12'
           
-      # - uses: borales/actions-yarn@v2.0.0
-      #   with:
-      #     cmd: install 
+      - uses: Borales/actions-yarn@v2.0.0
+        with:
+          cmd: install 
       # Creating Issue
       - name: Build 
-        run: npm run build
+        run: yarn build
         
       - name: Installing surge
         run: npm install --global surge
